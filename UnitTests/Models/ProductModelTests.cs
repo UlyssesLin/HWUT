@@ -30,5 +30,17 @@ namespace UnitTests
             // Assert
             Assert.AreEqual(DateTime.UtcNow.ToShortDateString(), result.Date.ToShortDateString());
         }
+
+        [TestMethod]
+        public void ProductModel_Get_Email_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual("Unknown", result.Email);
+        }
     }
 }
